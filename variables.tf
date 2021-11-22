@@ -33,13 +33,13 @@ variable "max_tagged_image_count" {
 }
 
 variable "scan_on_push" {
-  default     = false
+  default     = true
   type        = bool
   description = "Whether images should automatically be scanned on push or not."
 }
 
 variable "image_tag_mutability" {
-  default     = "MUTABLE"
+  default     = "IMMUTABLE"
   type        = string
   description = "Whether images are allowed to overwrite existing tags."
 }
