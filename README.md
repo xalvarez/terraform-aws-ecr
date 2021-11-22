@@ -19,7 +19,7 @@ This module provides recommended settings:
 
 ```hcl
 module "ecr" {
-  source          = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=v3.0.0"
+  source          = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=3.0.0"
   name            = "minimal"
   tag_prefix_list = ["release"]
 }
@@ -29,7 +29,7 @@ module "ecr" {
 
 ```hcl
 module "ecr" {
-  source               = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=v3.0.0"
+  source               = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=3.0.0"
   name                 = "complete"
   tag_prefix_list      = ["release"]
   scan_on_push         = true
