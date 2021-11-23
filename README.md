@@ -1,8 +1,11 @@
 # terraform-aws-ecr
 
-Terraform module which creates ECR resources on AWS.
+**Note: The original repository does not seem to be maintained anymore, and I haven't been able to reach
+its owner since over a year and a half. Therefore, I've decided to maintain this fork to my taste.**
 
 ## Description
+
+Terraform module which creates ECR resources on AWS.
 
 Provision [ECR Repository](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html),
 [Repository Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicies.html) and
