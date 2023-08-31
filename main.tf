@@ -48,7 +48,7 @@ data "aws_iam_policy_document" "only_pull" {
 # Allows specific accounts to push and pull images
 data "aws_iam_policy_document" "push_and_pull" {
   # An IAM policy document to import as a base for the current policy document
-  source_json = data.aws_iam_policy_document.only_pull.json
+  source_policy_documents = [data.aws_iam_policy_document.only_pull.json]
 
   statement {
     sid    = "ElasticContainerRegistryPushAndPull"
