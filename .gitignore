@@ -1,2 +1,7 @@
+# Hidden files & folders
 .**
+!.github
+!.gitignore
+
+# Test files
 *.sh
