@@ -1,18 +1,2 @@
-#  Local .terraform directories
-**/.terraform/*
-
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-# .tfvars files
-*.tfvars
-
-# IntelliJ
-.idea/
-
-# direnv
-.envrc
-
-# Auto include makefiles
-.Makefile.terraform
+.**
+*.sh
