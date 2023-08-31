@@ -1,6 +1,6 @@
 # terraform-aws-ecr
 
-**Note: The original repository does not seem to be maintained anymore, and I haven't been able to reach
+**Note: The original repository does not seem to be maintained any more, and I haven't been able to reach
 its owner since over a year and a half. Therefore, I've decided to maintain this fork to my taste.**
 
 ## Description
@@ -22,7 +22,7 @@ This module provides recommended settings:
 
 ```hcl
 module "ecr" {
-  source          = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=3.0.0"
+  source          = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=4.0.0"
   name            = "minimal"
   tag_prefix_list = ["release"]
 }
@@ -32,7 +32,7 @@ module "ecr" {
 
 ```hcl
 module "ecr" {
-  source               = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=3.0.0"
+  source               = "git@github.com:xalvarez/terraform-aws-ecr.git?ref=4.0.0"
   name                 = "complete"
   tag_prefix_list      = ["release"]
   scan_on_push         = true
@@ -45,27 +45,24 @@ module "ecr" {
 }
 ```
 
-## Examples
-
-- [Minimal](https://github.com/xalvarez/terraform-aws-ecr/tree/master/examples/minimal)
-- [Complete](https://github.com/xalvarez/terraform-aws-ecr/tree/master/examples/complete)
+[Example](example/minimal)
 
 ## Requirements
 
 | Name      | Version |
-| --------- | ------- |
+|-----------|---------|
 | terraform | >= 1.0  |
 
 ## Providers
 
-| Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+| Name | Version        |
+|------|----------------|
+| aws  | \>= 4.0, < 6.0 |
 
 ## Inputs
 
 | Name                     | Description                                                                  | Type           | Default       | Required |
-| ------------------------ | ---------------------------------------------------------------------------- | -------------- | ------------- | :------: |
+|--------------------------|------------------------------------------------------------------------------|----------------|---------------|:--------:|
 | name                     | Name of the repository.                                                      | `string`       | n/a           |   yes    |
 | tag_prefix_list          | List of image tag prefixes on which to take action with lifecycle policy.    | `list(string)` | n/a           |   yes    |
 | image_tag_mutability     | Whether images are allowed to overwrite existing tags.                       | `string`       | `"IMMUTABLE"` |    no    |
@@ -78,7 +75,7 @@ module "ecr" {
 ## Outputs
 
 | Name                       | Description                                                                                        |
-| -------------------------- | -------------------------------------------------------------------------------------------------- |
+|----------------------------|----------------------------------------------------------------------------------------------------|
 | ecr_repository_arn         | Full ARN of the repository.                                                                        |
 | ecr_repository_name        | The name of the repository.                                                                        |
 | ecr_repository_registry_id | The registry ID where the repository was created.                                                  |
@@ -86,4 +83,4 @@ module "ecr" {
 
 ## License
 
-Apache 2 Licensed. See LICENSE for full details.
+Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
