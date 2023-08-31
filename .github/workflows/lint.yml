@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-out git branch
+        uses: actions/checkout@v3.6.0
+      - name: Run terraform fmt
+        run: terraform fmt -recursive -check
+      - name: Install tflint
+        uses: terraform-linters/setup-tflint@v3.1.0
+      - name: Run tflint
+        run: tflint --recursive --format compact
