@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check-out git branch
-        uses: actions/checkout@v3.6.0
+        uses: actions/checkout@v4.1.1
       - name: Run terraform fmt
         run: terraform fmt -recursive -check
       - name: Install tflint
