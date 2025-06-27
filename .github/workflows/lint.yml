@@ -16,6 +16,6 @@ jobs:
       - name: Run terraform fmt
         run: terraform fmt -recursive -check
       - name: Install tflint
-        uses: terraform-linters/setup-tflint@v3.1.0
+        uses: terraform-linters/setup-tflint@v4.1.1
       - name: Run tflint
         run: tflint --recursive --format compact
