@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Check-out git branch
         uses: actions/checkout@v3.6.0
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3.1.2
       - name: Run terraform fmt
         run: terraform fmt -recursive -check
       - name: Install tflint
